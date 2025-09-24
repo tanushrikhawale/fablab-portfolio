@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Networking & Cyber Security - Tanushri's FabLab Portfolio</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .module-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    .back-link {
+      color: var(--primary-color);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      transition: all 0.3s;
+    }
+    .back-link:hover {
+      color: var(--primary-hover);
+      transform: translateX(-3px);
+    }
+    .back-link i { margin-right: 8px; }
+    .module-content { color: var(--text-muted); }
+    .module-content h2 {
+      font-size: 1.8rem;
+      color: var(--primary-color);
+      margin: 30px 0 20px;
+    }
+    .day-section {
+      margin-bottom: 2.5rem;
+      padding: 20px;
+      background: rgba(40, 40, 55, 0.6);
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow);
+    }
+    .day-section pre {
+      background: #1e1e2f;
+      padding: 10px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 10px 0;
+      color: #00ffea;
+      font-size: 0.9rem;
+    }
+    .mentor-note {
+      margin-top: 2rem;
+      padding: 15px;
+      background: rgba(139, 92, 246, 0.1);
+      border-left: 4px solid var(--primary-color);
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h1>Tanushri's Portfolio</h1>
+        <p>FabLab Journey</p>
+        <button id="sidebar-toggle" class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+      </div>
+
+      <div class="sidebar-content">
+        <div class="sidebar-group">
+          <h3 class="sidebar-group-label">Dashboard</h3>
+          <ul class="sidebar-menu">
+            <li class="sidebar-menu-item">
+              <a href="./index.html" class="sidebar-menu-link"><i class="fas fa-user"></i><span>About Me</span></a>
+            </li>
+            <li class="sidebar-menu-item">
+              <a href="./index.html#fablab-experience" class="sidebar-menu-link"><i class="fas fa-layer-group"></i><span>FabLab Experience</span></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <h3 class="sidebar-group-label">FabLab Modules</h3>
+          <ul class="sidebar-menu">
+            <li><a href="./fablab-webdev.html" class="sidebar-menu-link"><i class="fas fa-code"></i><span>Web Development</span></a></li>
+            <li><a href="./cad.html" class="sidebar-menu-link"><i class="fas fa-drafting-compass"></i><span>Computer Aided Designing</span></a></li>
+            <li><a href="./cac.html" class="sidebar-menu-link"><i class="fas fa-cut"></i><span>Laser Cutting</span></a></li>
+            <li><a href="./3d-printing.html" class="sidebar-menu-link"><i class="fas fa-cube"></i><span>3D Printing & Designing</span></a></li>
+            <li><a href="./iot.html" class="sidebar-menu-link"><i class="fas fa-microchip"></i><span>IOT & PCB Designing</span></a></li>
+            <li><a href="./java.html" class="sidebar-menu-link"><i class="fab fa-java"></i><span>Java</span></a></li>
+            <li><a href="./cyber-security.html" class="sidebar-menu-link active"><i class="fas fa-shield-alt"></i><span>Cyber Security & Networking</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <ul class="sidebar-menu">
+          <li><a href="./Tanushri_Resume_Professional_UI_React.pdf" download class="sidebar-menu-link"><i class="fas fa-download"></i><span>Download Resume</span></a></li>
+          <li><a href="./index.html#contact" class="sidebar-menu-link"><i class="fas fa-envelope"></i><span>Contact Me</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section class="content-section">
+        <div class="module-header">
+          <a href="./index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+          <h1>Cyber Security & Networking</h1>
+        </div>
+
+        <div class="module-content">
+          <p class="lead">
+            This 7-day combined module gave me deep insights into <strong>computer networking</strong> and 
+            <strong>cyber security practices</strong>.  
+            I learned how data flows across devices, how networks are built, and how to secure them against modern threats.  
+            The journey mixed <em>theory, labs with Cisco Packet Tracer, and practical security with Kali Linux</em>.
+          </p>
+
+          <!-- Day Sections -->
+          <div class="day-section">
+            <h2>Day 1 – Networking Basics</h2>
+            <p>
+              Introduced to different network types (<strong>LAN, WAN, MAN</strong>) and devices such as hubs, switches, and routers.  
+              Learned the difference between <em>IP addresses</em> and <em>MAC addresses</em>, and how data is broken into packets for transmission.
+            </p>
+            <p><strong>Activity:</strong> Drew a basic home network diagram and traced how a smartphone connects to a laptop via a WiFi router.</p>
+          </div>
+
+          <div class="day-section">
+            <h2>Day 2 – OSI Model & TCP/IP</h2>
+            <p>
+              Explored the <strong>7-layer OSI Model</strong> and the 4-layer <strong>TCP/IP stack</strong>.  
+              Understood how protocols like HTTP, FTP, TCP, UDP, and IP fit into the model.  
+              Learned the concept of encapsulation and de-encapsulation during communication.
+            </p>
+            <pre><code>ping 192.168.1.2</code></pre>
+            <p><strong>Activity:</strong> Connected two PCs in Packet Tracer, assigned IP addresses, and verified connectivity with ping.</p>
+          </div>
+
+          <div class="day-section">
+            <h2>Day 3 – IP Addressing & Subnetting</h2>
+            <p>
+              Learned about IPv4 address classes, private vs public IPs, and subnet masks.  
+              Practiced subnetting by dividing <code>192.168.1.0/24</code> into smaller subnets for efficient use.
+            </p>
+            <pre><code>PC1: 192.168.1.10  Subnet: 255.255.255.0  Gateway: 192.168.1.1
+PC2: 192.168.1.20  Subnet: 255.255.255.0  Gateway: 192.168.1.1</code></pre>
+            <p><strong>Activity:</strong> Configured manual IP addresses and successfully tested communication.</p>
+          </div>
+
+          <div class="day-section">
+            <h2>Day 4 – Routing & Switching Labs</h2>
+            <p>
+              Learned the role of <strong>switches (Layer 2)</strong> and <strong>routers (Layer 3)</strong>.  
+              Configured static routing to connect two LANs in Packet Tracer.
+            </p>
+            <pre><code>Router> enable
+Router# configure terminal
+Router(config)# ip route 192.168.2.0 255.255.255.0 10.0.0.2</code></pre>
+            <p><strong>Activity:</strong> Built two LANs, connected them with routers, and enabled cross-LAN communication.</p>
+          </div>
+
+          <div class="day-section">
+            <h2>Day 5 – Cyber Security Fundamentals</h2>
+            <p>
+              Learned about the <strong>CIA Triad</strong> (Confidentiality, Integrity, Availability) and different attack types like <em>Phishing</em>, <em>DDoS</em>, and <em>SQL Injection</em>.  
+              Explored security defenses such as <strong>firewalls</strong>, IDS/IPS, and antivirus software.
+            </p>
+            <p><strong>Activity:</strong> Analyzed a phishing email example and listed signs to detect suspicious links.</p>
+          </div>
+
+          <div class="day-section">
+            <h2>Day 6 – Hands-on Security</h2>
+            <p>
+              Used <strong>Kali Linux tools</strong> to perform network scanning and traffic analysis.  
+              Practiced ethical hacking basics with <strong>Nmap</strong> and <strong>Wireshark</strong>.
+            </p>
+            <pre><code># Scan open ports
+nmap 192.168.1.1
+
+# Capture live traffic
+wireshark
+
+# Display IP configuration
+ifconfig</code></pre>
+            <p><strong>Activity:</strong> Captured HTTP traffic in Wireshark and observed why unencrypted websites are unsafe.</p>
+          </div>
+
+          <div class="day-section">
+            <h2>Day 7 – Secure Networking Practices</h2>
+            <p>
+              Final day focused on <strong>best practices</strong> like strong password policies, enabling HTTPS, using SSL/TLS certificates, and VPNs for secure communication.  
+              Discussed real-world cases like WannaCry ransomware and how organizations defend against such attacks.
+            </p>
+            <p><strong>Activity:</strong> Configured WPA2 security on routers in Packet Tracer and enabled firewalls for protection.</p>
+          </div>
+
+          <!-- Outcomes -->
+          <h2>✅ Learning Outcomes</h2>
+          <ul>
+            <li>Mastered OSI model, IP addressing, and subnetting.</li>
+            <li>Configured routers & switches in Packet Tracer.</li>
+            <li>Understood common cyber threats and countermeasures.</li>
+            <li>Performed basic penetration testing with Kali Linux tools.</li>
+            <li>Designed and secured small-scale networks.</li>
+          </ul>
+
+          <div class="mentor-note">
+            <strong>Mentor:</strong> Gorav Sharma guided me through both Networking and Cyber Security, 
+            ensuring I gained a balance of theoretical knowledge and practical skills.
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>

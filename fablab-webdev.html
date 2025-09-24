@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Development - Tanushri's FabLab Portfolio</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h1>Tanushri's Portfolio</h1>
+        <p>FabLab Journey</p>
+        <button id="sidebar-toggle" class="sidebar-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div class="sidebar-content">
+        <div class="sidebar-group">
+          <h3 class="sidebar-group-label">Dashboard</h3>
+          <ul class="sidebar-menu">
+            <li><a href="./index.html" class="sidebar-menu-link"><i class="fas fa-user"></i><span>About Me</span></a></li>
+            <li><a href="./index.html#fablab-experience" class="sidebar-menu-link"><i class="fas fa-layer-group"></i><span>FabLab Experience</span></a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <h3 class="sidebar-group-label">FabLab Modules</h3>
+          <ul class="sidebar-menu">
+            <li class="sidebar-menu-item">
+                            <a href="./fablab-webdev.html" class="sidebar-menu-link">
+                                <i class="fas fa-code"></i>
+                                <span>Web Development</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="./cad.html" class="sidebar-menu-link">
+                                <i class="fas fa-drafting-compass"></i>
+                                <span>Computer Aided Designing</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="./cac.html" class="sidebar-menu-link">
+                                <i class="fas fa-cut"></i>
+                                <span>Laser Cutting</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="./3d-printing.html" class="sidebar-menu-link">
+                                <i class="fas fa-cube"></i>
+                                <span>3D Printing & Designing</span>
+                            </a>
+                        </li>
+                         <li class="sidebar-menu-item">
+                            <a href="./iot.html" class="sidebar-menu-link">
+                                <i class="fab fa-java"></i>
+                                <span>IOT & PCB Designing</span>
+                            </a>
+                        </li>
+                        
+                        <li class="sidebar-menu-item">
+                            <a href="./java.html" class="sidebar-menu-link">
+                                <i class="fab fa-java"></i>
+                                <span>Java</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="./cyber-security.html" class="sidebar-menu-link">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Cyber Security & Networking</span>
+                            </a>
+                        </li></ul>
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <ul class="sidebar-menu">
+          <li><a href="./Tanushri_Resume_Professional_UI_React.pdf" download class="sidebar-menu-link"><i class="fas fa-download"></i><span>Download Resume</span></a></li>
+          <li><a href="./index.html#contact" class="sidebar-menu-link"><i class="fas fa-envelope"></i><span>Contact Me</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section class="content-section">
+        <div class="module-header">
+          <a href="./index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+          <h1>Web Development</h1>
+        </div>
+
+        <div class="module-content">
+          <p class="lead">
+            Web development is the foundation of modern digital experiences. This 7-day FabLab module guided me through HTML, CSS, and JavaScript. What follows is not just notes—it’s my journey of concepts, struggles, and breakthroughs.
+          </p>
+
+          <!-- Day 1 -->
+          <div class="day-section">
+            <h2>Day 1 – HTML Structure</h2>
+            <p>
+              HTML (HyperText Markup Language) provides the skeleton of every webpage. On Day 1, I explored the anatomy of an HTML document: 
+              <code>&lt;!DOCTYPE&gt;</code>, <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, and <code>&lt;body&gt;</code>. 
+              I learned how browsers interpret markup step by step.
+            </p>
+            <p>
+              In the FabLab, we built our first page with just a heading and a paragraph. 
+              The thrill of seeing "Hello World" appear made me realize how a few lines of text 
+              can become a webpage. Initially, I mixed up what goes inside <code>&lt;head&gt;</code> vs <code>&lt;body&gt;</code>, 
+              but I understood quickly after debugging.
+            </p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+    &lt;p&gt;This is my first webpage.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+          </div>
+
+          <!-- Day 2 -->
+          <div class="day-section">
+            <h2>Day 2 – Common Tags</h2>
+            <p>
+              We dived into headings, paragraphs, lists, links, and images. 
+              I discovered how these tags shape content meaningfully. 
+              I also practiced creating ordered and unordered lists.
+            </p>
+            <p>
+              My experience: I was fascinated by how an <code>&lt;a&gt;</code> tag can link pages together, 
+              making the web truly interconnected. I accidentally broke an image path, but fixing it taught me 
+              about relative vs absolute file references.
+            </p>
+<pre><code>&lt;h2&gt;About Me&lt;/h2&gt;
+&lt;p&gt;I love Web Development.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a href="https://www.ssgmce.ac.in/"&gt;Visit SSGMCE&lt;/a&gt;</code></pre>
+          </div>
+
+          <!-- Day 3 -->
+          <div class="day-section">
+            <h2>Day 3 – Semantic HTML</h2>
+            <p>
+              Semantic tags like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code> 
+              bring structure and accessibility to HTML. Instead of stacking <code>&lt;div&gt;</code>s, 
+              semantic elements communicate meaning.
+            </p>
+            <p>
+              In the session, we built a mini webpage layout. At first, I felt lost with so many new tags, 
+              but once arranged, the structure looked natural. Creating my first form using <code>&lt;input&gt;</code> 
+              and <code>&lt;button&gt;</code> made me appreciate how user interaction is captured.
+            </p>
+<pre><code>&lt;header&gt;My Website&lt;/header&gt;
+&lt;main&gt;
+  &lt;form&gt;
+    &lt;label&gt;Name:&lt;/label&gt;
+    &lt;input type="text" name="name"&gt;
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/main&gt;
+&lt;footer&gt;© 2025&lt;/footer&gt;</code></pre>
+          </div>
+
+          <!-- Day 4 -->
+          <div class="day-section">
+            <h2>Day 4 – CSS Basics</h2>
+            <p>
+              CSS (Cascading Style Sheets) makes HTML beautiful. On Day 4, I learned selectors, colors, fonts, and spacing. 
+              Styling gave me creative control over the plain HTML.
+            </p>
+            <p>
+              My FabLab experience: I enjoyed experimenting with background colors and typography. 
+              Watching text instantly transform after adding a CSS rule felt magical. I also realized the 
+              importance of separating content from style.
+            </p>
+<pre><code>h1 { color: purple; }
+p { font-size: 16px; }
+#main { background: black; }</code></pre>
+          </div>
+
+          <!-- Day 5 -->
+          <div class="day-section">
+            <h2>Day 5 – Layouts with Flexbox & Grid</h2>
+            <p>
+              Day 5 was about positioning. Flexbox helps align items in rows and columns, while Grid handles complex 2D layouts. 
+              These systems make responsive design possible.
+            </p>
+            <p>
+              During practice, I used Flexbox to center elements both vertically and horizontally—something that 
+              used to be very hard with older CSS. I also built a 3-column Grid layout, which showed me how powerful CSS has become.
+            </p>
+<pre><code>.container {
+  display: flex;
+  justify-content: space-between;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}</code></pre>
+          </div>
+
+          <!-- Day 6 -->
+          <div class="day-section">
+            <h2>Day 6 – Animations & Transitions</h2>
+            <p>
+              On Day 6, I explored how to add life to web pages using CSS transitions and animations. 
+              Transitions make hover effects smooth, while animations can move elements over time.
+            </p>
+            <p>
+              My experience: I animated a button to glow when hovered. It made the page feel modern and interactive. 
+              I learned that subtle animations can guide user focus without being distracting.
+            </p>
+<pre><code>button {
+  transition: background 0.3s ease;
+}
+button:hover {
+  background: #7b5cff;
+  color: white;
+}</code></pre>
+          </div>
+
+          <!-- Day 7 -->
+          <div class="day-section">
+            <h2>Day 7 – JavaScript Basics</h2>
+            <p>
+              JavaScript is the brain of a website. I learned about variables, functions, and how to interact with the DOM (Document Object Model). 
+              This allows dynamic updates to content without reloading the page.
+            </p>
+            <p>
+              At FabLab, I wrote a script that changed text on a button click. Debugging my first error messages 
+              was frustrating, but when it finally worked, I felt empowered. This session showed me how 
+              logic and creativity meet in coding.
+            </p>
+<pre><code>// Variables
+let name = "Tanushri";
+
+// Function
+function greet(user) {
+  return "Hello, " + user + "!";
+}
+
+console.log(greet(name));
+
+// DOM example
+document.getElementById("title").innerText = "Welcome to FabLab Web Dev!";</code></pre>
+
+  <h2>Mentor</h2>
+          <p><strong>Amruta Koparkar</strong></p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

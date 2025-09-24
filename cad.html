@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAD - Tanushri's FabLab Portfolio</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .module-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .back-link {
+      color: var(--primary-color);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      transition: all 0.3s;
+    }
+
+    .back-link:hover {
+      color: var(--primary-hover);
+      transform: translateX(-3px);
+    }
+
+    .back-link i {
+      margin-right: 8px;
+    }
+
+    .module-content {
+      color: var(--text-muted);
+    }
+
+    .module-content h2 {
+      font-size: 1.8rem;
+      color: var(--primary-color);
+      margin: 30px 0 20px;
+    }
+
+    .module-content h3 {
+      font-size: 1.4rem;
+      color: var(--primary-color);
+      margin: 25px 0 15px;
+    }
+
+    .day-section {
+      margin-bottom: 2.5rem;
+      padding: 20px;
+      background: rgba(40, 40, 55, 0.6);
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow);
+    }
+
+    .day-section img {
+      margin-top: 15px;
+      border-radius: 10px;
+      max-width: 100%;
+    }
+
+    .mentor-note {
+      margin-top: 2rem;
+      padding: 15px;
+      background: rgba(139, 92, 246, 0.1);
+      border-left: 4px solid var(--primary-color);
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h1>Tanushri's Portfolio</h1>
+        <p>FabLab Journey</p>
+        <button id="sidebar-toggle" class="sidebar-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div class="sidebar-content">
+        <div class="sidebar-group">
+          <h3 class="sidebar-group-label">Dashboard</h3>
+          <ul class="sidebar-menu">
+            <li class="sidebar-menu-item">
+              <a href="./index.html" class="sidebar-menu-link">
+                <i class="fas fa-user"></i>
+                <span>About Me</span>
+              </a>
+            </li>
+            <li class="sidebar-menu-item">
+              <a href="./index.html#fablab-experience" class="sidebar-menu-link">
+                <i class="fas fa-layer-group"></i>
+                <span>FabLab Experience</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <h3 class="sidebar-group-label">FabLab Modules</h3>
+          <ul class="sidebar-menu">
+           <li class="sidebar-menu-item">
+                            <a href="./fablab-webdev.html" class="sidebar-menu-link">
+                                <i class="fas fa-code"></i>
+                                <span>Web Development</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="./cad.html" class="sidebar-menu-link">
+                                <i class="fas fa-drafting-compass"></i>
+                                <span>Computer Aided Designing</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="./cac.html" class="sidebar-menu-link">
+                                <i class="fas fa-cut"></i>
+                                <span>Laser Cutting</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="./3d-printing.html" class="sidebar-menu-link">
+                                <i class="fas fa-cube"></i>
+                                <span>3D Printing & Designing</span>
+                            </a>
+                        </li>
+                         <li class="sidebar-menu-item">
+                            <a href="./iot.html" class="sidebar-menu-link">
+                                <i class="fab fa-java"></i>
+                                <span>IOT & PCB Designing</span>
+                            </a>
+                        </li>
+                        
+                        <li class="sidebar-menu-item">
+                            <a href="./java.html" class="sidebar-menu-link">
+                                <i class="fab fa-java"></i>
+                                <span>Java</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="./cyber-security.html" class="sidebar-menu-link">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Cyber Security & Networking</span>
+                            </a>
+                        </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <ul class="sidebar-menu">
+          <li class="sidebar-menu-item">
+            <a href="./Tanushri_Resume_Professional_UI_React.pdf" download class="sidebar-menu-link">
+              <i class="fas fa-download"></i>
+              <span>Download Resume</span>
+            </a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a href="./index.html#contact" class="sidebar-menu-link">
+              <i class="fas fa-envelope"></i>
+              <span>Contact Me</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <section class="content-section">
+        <div class="module-header">
+          <a href="./index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Home
+          </a>
+          <h1>Computer Aided Designing (CAD)</h1>
+        </div>
+
+        <div class="module-content">
+          <p class="lead">
+            In this module, I explored <strong>Autodesk Fusion 360</strong>, one of the most powerful CAD tools. 
+            Over 7 days, I learned to create sketches, build 3D models, assemble parts, and render my final 
+            project: a <strong>Canon design</strong>.
+          </p>
+
+          <!-- Day-wise sections -->
+          <div class="day-section">
+            <h2>Day 1 – Introduction to CAD & Fusion 360</h2>
+            <p>
+              Learned what Computer-Aided Design (CAD) means and how it enables engineers to design products 
+              digitally. Explored Fusion 360’s interface including the toolbar, browser, and timeline. 
+              Understood <em>parametric design</em>, where models are driven by editable parameters.
+            </p>
+            <img src="./pipe.png" alt="Day 1 CAD Practice (Placeholder)">
+          </div>
+
+          <div class="day-section">
+            <h2>Day 2 – Sketching & Constraints</h2>
+            <p>
+              Focused on 2D sketches, which form the foundation of 3D models. Practiced with 
+              <strong>geometric constraints</strong> (parallel, concentric, tangent) and 
+              <strong>dimensional constraints</strong> (length, angles). Learned that constraints 
+              make models editable and robust.
+            </p>
+            <img src="./Screenshot 2025-09-24 062710.png" alt="Day 2 CAD Sketch (Placeholder)">
+          </div>
+
+          <div class="day-section">
+            <h2>Day 3 – 3D Features & Tools</h2>
+            <p>
+              Practiced turning sketches into 3D models using features like <em>extrude</em>, <em>revolve</em>, 
+              <em>sweep</em>, and <em>loft</em>. Learned the importance of Fusion’s timeline, which 
+              records each step and allows for easy edits.
+            </p>
+          </div>
+
+          <div class="day-section">
+            <h2>Day 4 – Assemblies & Joints</h2>
+            <p>
+              Learned the difference between bodies and components. Practiced assembling parts with 
+              joints such as rigid, revolute, and slider. This step was crucial for building mechanisms 
+              like my final canon project.
+            </p>
+          </div>
+
+          <div class="day-section">
+            <h2>Day 5 – Rendering & Materials</h2>
+            <p>
+              Applied realistic materials like metal and wood to my models. Used Fusion’s rendering 
+              workspace to create presentation-ready images with lighting and shadows.
+            </p>
+          </div>
+
+          <div class="day-section">
+            <h2>Day 6 – Simulation (Bonus)</h2>
+            <p>
+              Explored simulation features like stress analysis and motion testing. Learned how 
+              Fusion can validate designs under load, ensuring functionality before manufacturing.
+            </p>
+          </div>
+
+          <div class="day-section">
+            <h2>Day 7 – Final Project: Canon Design</h2>
+            <p>
+              As my final project, I designed a canon in Fusion 360. The model included a barrel, base, 
+              and wheels, assembled with joints to simulate real movement. Added materials for realism 
+              and rendered the final design.
+            </p>
+            <img src="./canon.png" alt="Final Canon Design (Placeholder)">
+          </div>
+
+          <h2>Learning Outcomes</h2>
+          <ul>
+            <li>Gained confidence in using Fusion 360 for sketches, 3D modeling, assemblies, and rendering.</li>
+            <li>Learned best practices like parametric design and clean timeline management.</li>
+            <li>Connected CAD skills with real-world fabrication like 3D printing and CNC machining.</li>
+            <li>Completed a final canon project showcasing my CAD learning journey.</li>
+          </ul>
+
+          <div class="mentor-note">
+            <strong>Mentor:</strong> Swayam Dhamode guided me throughout the CAD module, providing 
+            practical insights and valuable feedback.
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>

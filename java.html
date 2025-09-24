@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Java OOP Module - Tanushri's FabLab Portfolio</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .module-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    .back-link {
+      color: var(--primary-color);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      transition: all 0.3s;
+    }
+    .back-link:hover {
+      color: var(--primary-hover);
+      transform: translateX(-3px);
+    }
+    .back-link i { margin-right: 8px; }
+    .module-content { color: var(--text-muted); }
+    .module-content h2 {
+      font-size: 1.8rem;
+      color: var(--primary-color);
+      margin: 30px 0 20px;
+    }
+    .mentor-note {
+      background: rgba(255,255,255,0.05);
+      border-left: 4px solid var(--primary-color);
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      color: var(--text-light);
+    }
+    pre {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 1rem;
+      border-radius: 0.5rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+    }
+    code {
+      font-family: "Fira Code", monospace;
+      font-size: 0.95rem;
+      color: #eaeaea;
+      white-space: pre-wrap;
+    }
+    .output-box {
+      background: rgba(0,0,0,0.4);
+      border: 1px dashed var(--border-color);
+      padding: 1rem;
+      margin-top: 0.5rem;
+      font-family: monospace;
+      color: #b5e853;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h1>Tanushri's Portfolio</h1>
+        <p>FabLab Journey</p>
+        <button id="sidebar-toggle" class="sidebar-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <div class="sidebar-content">
+        <div class="sidebar-group">
+          <h3 class="sidebar-group-label">Dashboard</h3>
+          <ul class="sidebar-menu">
+            <li><a href="./index.html" class="sidebar-menu-link"><i class="fas fa-user"></i><span>About Me</span></a></li>
+            <li><a href="./index.html#fablab-experience" class="sidebar-menu-link"><i class="fas fa-layer-group"></i><span>FabLab Experience</span></a></li>
+          </ul>
+        </div>
+        <div class="sidebar-group">
+          <h3 class="sidebar-group-label">FabLab Modules</h3>
+          <ul class="sidebar-menu">
+            <li class="sidebar-menu-item">
+                            <a href="./fablab-webdev.html" class="sidebar-menu-link">
+                                <i class="fas fa-code"></i>
+                                <span>Web Development</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="./cad.html" class="sidebar-menu-link">
+                                <i class="fas fa-drafting-compass"></i>
+                                <span>Computer Aided Designing</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="./cac.html" class="sidebar-menu-link">
+                                <i class="fas fa-cut"></i>
+                                <span>Laser Cutting</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="./3d-printing.html" class="sidebar-menu-link">
+                                <i class="fas fa-cube"></i>
+                                <span>3D Printing & Designing</span>
+                            </a>
+                        </li>
+                         <li class="sidebar-menu-item">
+                            <a href="./iot.html" class="sidebar-menu-link">
+                                <i class="fab fa-java"></i>
+                                <span>IOT & PCB Designing</span>
+                            </a>
+                        </li>
+                        
+                        <li class="sidebar-menu-item">
+                            <a href="./java.html" class="sidebar-menu-link">
+                                <i class="fab fa-java"></i>
+                                <span>Java</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="./cyber-security.html" class="sidebar-menu-link">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Cyber Security & Networking</span>
+                            </a>
+                        </li>
+        </div>
+      </div>
+      <div class="sidebar-footer">
+        <ul class="sidebar-menu">
+          <li><a href="./Tanushri_Resume_Professional_UI_React.pdf" download class="sidebar-menu-link"><i class="fas fa-download"></i><span>Download Resume</span></a></li>
+          <li><a href="./index.html#contact" class="sidebar-menu-link"><i class="fas fa-envelope"></i><span>Contact Me</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section class="content-section">
+        <div class="module-header">
+          <a href="./index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+          <h1>Java OOPs Module</h1>
+        </div>
+
+        <div class="module-content">
+          <p class="lead">This documentation reflects my 7-day structured OOP learning with Java at FabLab. I studied theory, wrote code daily, and completed two projects to strengthen my understanding of OOP principles.</p>
+
+          <!-- Day 1 -->
+          <h2>Day 1 – Programming Fundamentals</h2>
+          <p>I revised Java basics: variables, operators, loops, and conditionals. This was crucial before diving into OOPs. I also practiced small problems like factorial, prime check, and Fibonacci.</p>
+          <div class="mentor-note">💡 Mentor Note: Understand JVM, JDK, and JRE differences and data type ranges. Strong basics make OOP easy later.</div>
+          <pre><code>// Day1Basics.java
+public class Day1Basics {
+    static int factorial(int n) {
+        int result = 1;
+        for (int i = 2; i <= n; i++) result *= i;
+        return result;
+    }
+
+    static boolean isPrime(int n) {
+        if (n <= 1) return false;
+        for (int i = 2; i * i <= n; i++) if (n % i == 0) return false;
+        return true;
+    }
+
+    public static void main(String[] args) {
+        int a = 10, b = 3;
+        System.out.println("a + b = " + (a + b));
+        System.out.println("Factorial of 5 = " + factorial(5));
+        System.out.println("Is 13 prime? " + isPrime(13));
+    }
+}
+</code></pre>
+          <div class="output-box">a + b = 13<br>Factorial of 5 = 120<br>Is 13 prime? true</div>
+
+          <!-- Day 2 -->
+          <h2>Day 2 – Functions & Recursion</h2>
+          <p>I explored modular programming with functions and recursion. Recursion simplified problems like factorial and Fibonacci.</p>
+          <pre><code>// Day2Functions.java
+public class Day2Functions {
+    static int factorialRec(int n) {
+        if (n <= 1) return 1;
+        return n * factorialRec(n - 1);
+    }
+
+    static int fibRec(int n) {
+        if (n <= 1) return n;
+        return fibRec(n - 1) + fibRec(n - 2);
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Factorial(5) = " + factorialRec(5));
+        System.out.println("Fibonacci(6) = " + fibRec(6));
+    }
+}
+</code></pre>
+          <div class="output-box">Factorial(5) = 120<br>Fibonacci(6) = 8</div>
+
+          <!-- Day 3 -->
+          <h2>Day 3 – Classes & Objects</h2>
+          <p>I created my first custom class <code>Car</code> with attributes and methods. This taught me how real-world entities can be modeled in code.</p>
+          <pre><code>// Car.java
+class Car {
+    String brand, model;
+    int year, mileage;
+
+    Car(String brand, String model, int year, int mileage) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+        this.mileage = mileage;
+    }
+
+    void drive(int km) {
+        mileage += km;
+        System.out.println("Driven " + km + " km. Mileage: " + mileage);
+    }
+
+    void display() {
+        System.out.println(brand + " " + model + " (" + year + ") - " + mileage + " km");
+    }
+}
+
+public class Day3CarDemo {
+    public static void main(String[] args) {
+        Car c1 = new Car("Toyota", "Yaris", 2020, 0);
+        c1.display();
+        c1.drive(120);
+    }
+}
+</code></pre>
+          <div class="output-box">Toyota Yaris (2020) - 0 km<br>Driven 120 km. Mileage: 120</div>
+
+          <!-- Day 4 -->
+          <h2>Day 4 – Encapsulation & Abstraction</h2>
+          <p>I learned data hiding using private fields and getters/setters. Abstraction was introduced with hiding internal details from the user.</p>
+          <pre><code>// BankAccount.java
+class BankAccount {
+    private String accountNumber;
+    private String owner;
+    private double balance;
+
+    BankAccount(String accountNumber, String owner, double balance) {
+        this.accountNumber = accountNumber;
+        this.owner = owner;
+        this.balance = balance;
+    }
+
+    public double getBalance() { return balance; }
+
+    public void deposit(double amount) {
+        if (amount > 0) balance += amount;
+    }
+
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) balance -= amount;
+        else System.out.println("Insufficient funds!");
+    }
+
+    public void display() {
+        System.out.println("Account: " + accountNumber + ", Owner: " + owner + ", Balance: " + balance);
+    }
+}
+
+public class Day4BankDemo {
+    public static void main(String[] args) {
+        BankAccount acct = new BankAccount("AC123", "Anshuman", 500);
+        acct.display();
+        acct.deposit(250);
+        acct.withdraw(200);
+        acct.display();
+    }
+}
+</code></pre>
+          <div class="output-box">Account: AC123, Owner: Anshuman, Balance: 500.0<br>Account: AC123, Owner: Anshuman, Balance: 550.0</div>
+
+          <!-- Day 5 -->
+          <h2>Day 5 – Inheritance</h2>
+          <p>I understood code reusability and hierarchy with <code>Person</code> and <code>Student</code>. Inheritance allowed extending features easily.</p>
+          <pre><code>// Person.java
+class Person {
+    String name;
+    int age;
+
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    void display() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+}
+
+class Student extends Person {
+    String rollNo, course;
+
+    Student(String name, int age, String rollNo, String course) {
+        super(name, age);
+        this.rollNo = rollNo;
+        this.course = course;
+    }
+
+    @Override
+    void display() {
+        super.display();
+        System.out.println("Roll No: " + rollNo + ", Course: " + course);
+    }
+}
+
+public class Day5InheritanceDemo {
+    public static void main(String[] args) {
+        Student s = new Student("Tanu", 20, "IT40", "B.E. IT");
+        s.display();
+    }
+}
+</code></pre>
+          <div class="output-box">Name: Tanu, Age: 20<br>Roll No: IT40, Course: B.E. IT</div>
+
+          <!-- Day 6 -->
+          <h2>Day 6 – Polymorphism</h2>
+          <p>I implemented runtime polymorphism using abstract classes. <code>Shape</code> was the base, and Circle/Rectangle overrode <code>area()</code>.</p>
+          <pre><code>// Shape.java
+abstract class Shape {
+    abstract double area();
+}
+
+class Circle extends Shape {
+    double radius;
+    Circle(double radius) { this.radius = radius; }
+
+    @Override
+    double area() { return Math.PI * radius * radius; }
+}
+
+class Rectangle extends Shape {
+    double w, h;
+    Rectangle(double w, double h) { this.w = w; this.h = h; }
+
+    @Override
+    double area() { return w * h; }
+}
+
+public class Day6PolymorphismDemo {
+    public static void main(String[] args) {
+        Shape s1 = new Circle(5);
+        Shape s2 = new Rectangle(4, 6);
+
+        System.out.println("Circle area = " + s1.area());
+        System.out.println("Rectangle area = " + s2.area());
+    }
+}
+</code></pre>
+          <div class="output-box">Circle area = 78.53981633974483<br>Rectangle area = 24.0</div>
+
+          <!-- Day 7 -->
+          <h2>Day 7 – Mini Project (Library Management System)</h2>
+          <p>I applied OOP pillars to build a mini Library System managing books and members. This was my first OOP project.</p>
+          <pre><code>// Book.java
+class Book {
+    String title, author, isbn;
+
+    Book(String title, String author, String isbn) {
+        this.title = title;
+        this.author = author;
+        this.isbn = isbn;
+    }
+
+    void display() {
+        System.out.println("Book: " + title + " by " + author + " [ISBN: " + isbn + "]");
+    }
+}
+
+class Member {
+    String name;
+    int memberId;
+
+    Member(String name, int memberId) {
+        this.name = name;
+        this.memberId = memberId;
+    }
+
+    void display() {
+        System.out.println("Member: " + name + " (ID: " + memberId + ")");
+    }
+}
+
+class Library {
+    Book[] books;
+    int count;
+
+    Library(int size) {
+        books = new Book[size];
+        count = 0;
+    }
+
+    void addBook(Book b) {
+        if (count < books.length) {
+            books[count++] = b;
+            System.out.println("Book added: " + b.title);
+        } else {
+            System.out.println("Library is full!");
+        }
+    }
+
+    void showBooks() {
+        System.out.println("--- Library Books ---");
+        for (int i = 0; i < count; i++) books[i].display();
+    }
+}
+
+public class Day7LibraryDemo {
+    public static void main(String[] args) {
+        Library lib = new Library(5);
+        Book b1 = new Book("THE MAGIC OF THE LOST TEMPLE", "Sudha Murty", "111");
+        Book b2 = new Book("Janaka & Ashtavkra", "Ashraf Karayath", "222");
+        Member m1 = new Member("Tanushri", 101);
+
+        lib.addBook(b1);
+        lib.addBook(b2);
+
+        m1.display();
+        lib.showBooks();
+    }
+}
+</code></pre>
+          <div class="output-box">Book added: OOP in Java<br>Book added: Clean Code<br>Member: Anshuman (ID: 101)<br>--- Library Books ---<br>Book: OOP in Java by James Gosling [ISBN: 111]<br>Book: Clean Code by Robert Martin [ISBN: 222]</div>
+
+          <!-- Capstone Project -->
+          <h2>Capstone Project – Vehicle Management System</h2>
+          <p>This project combined Encapsulation, Inheritance, Abstraction, and Polymorphism into a vehicle system.</p>
+          <pre><code>// Vehicle.java
+abstract class Vehicle {
+    private String brand, model;
+    private double price;
+
+    public Vehicle(String brand, String model, double price) {
+        this.brand = brand; this.model = model; this.price = price;
+    }
+
+    public String getBrand() { return brand; }
+    public String getModel() { return model; }
+    public double getPrice() { return price; }
+
+    abstract void displayDetails();
+}
+
+class Car extends Vehicle {
+    private int doors;
+    public Car(String brand, String model, double price, int doors) {
+        super(brand, model, price); this.doors = doors;
+    }
+    @Override
+    void displayDetails() {
+        System.out.println("Car: " + getBrand() + " " + getModel() +
+        " | Price: $" + getPrice() + " | Doors: " + doors);
+    }
+}
+
+class Bike extends Vehicle {
+    private String type;
+    public Bike(String brand, String model, double price, String type) {
+        super(brand, model, price); this.type = type;
+    }
+    @Override
+    void displayDetails() {
+        System.out.println("Bike: " + getBrand() + " " + getModel() +
+        " | Price: $" + getPrice() + " | Type: " + type);
+    }
+}
+
+class Truck extends Vehicle {
+    private double loadCapacity;
+    public Truck(String brand, String model, double price, double loadCapacity)
+
+      <h2>Mentor</h2>
+          <p><strong>Atharv Pathak</strong></p>

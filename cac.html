@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laser Cutting (CAC) - Tanushri's FabLab Portfolio</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .module-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    .back-link {
+      color: var(--primary-color);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      transition: all 0.3s;
+    }
+    .back-link:hover { color: var(--primary-hover); transform: translateX(-3px); }
+    .back-link i { margin-right: 8px; }
+    .module-content { color: var(--text-muted); }
+    .module-content h2 {
+      font-size: 1.8rem;
+      color: var(--primary-color);
+      margin: 30px 0 20px;
+    }
+    .day-section {
+      margin-bottom: 2.5rem;
+      padding: 20px;
+      background: rgba(40, 40, 55, 0.6);
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow);
+    }
+    .day-section img, .day-section video {
+      margin-top: 15px;
+      border-radius: 10px;
+      max-width: 100%;
+    }
+    .assets-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .mentor-note {
+      margin-top: 2rem;
+      padding: 15px;
+      background: rgba(139, 92, 246, 0.1);
+      border-left: 4px solid var(--primary-color);
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h1>Tanushri's Portfolio</h1>
+        <p>FabLab Journey</p>
+        <button id="sidebar-toggle" class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+      </div>
+
+      <div class="sidebar-content">
+        <div class="sidebar-group">
+          <h3 class="sidebar-group-label">Dashboard</h3>
+          <ul class="sidebar-menu">
+            <li><a href="./index.html" class="sidebar-menu-link"><i class="fas fa-user"></i><span>About Me</span></a></li>
+            <li><a href="./index.html#fablab-experience" class="sidebar-menu-link"><i class="fas fa-layer-group"></i><span>FabLab Experience</span></a></li>
+          </ul>
+        </div>
+        <div class="sidebar-group">
+          <h3 class="sidebar-group-label">FabLab Modules</h3>
+          <ul class="sidebar-menu">
+            <li><a href="./fablab-webdev.html" class="sidebar-menu-link"><i class="fas fa-code"></i><span>Web Development</span></a></li>
+            <li><a href="./cad.html" class="sidebar-menu-link"><i class="fas fa-drafting-compass"></i><span>Computer Aided Designing</span></a></li>
+            <li><a href="./cac.html" class="sidebar-menu-link active"><i class="fas fa-cut"></i><span>Laser Cutting</span></a></li>
+            <li><a href="./3d-printing.html" class="sidebar-menu-link"><i class="fas fa-cube"></i><span>3D Printing & Designing</span></a></li>
+            <li><a href="./iot.html" class="sidebar-menu-link"><i class="fab fa-java"></i><span>IOT & PCB Designing</span></a></li>
+            <li><a href="./java.html" class="sidebar-menu-link"><i class="fab fa-java"></i><span>Java</span></a></li>
+            <li><a href="./cyber-security.html" class="sidebar-menu-link"><i class="fas fa-shield-alt"></i><span>Cyber Security & Networking</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <ul class="sidebar-menu">
+          <li><a href="./Tanushri_Resume_Professional_UI_React.pdf" download class="sidebar-menu-link"><i class="fas fa-download"></i><span>Download Resume</span></a></li>
+          <li><a href="./index.html#contact" class="sidebar-menu-link"><i class="fas fa-envelope"></i><span>Contact Me</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section class="content-section">
+        <div class="module-header">
+          <a href="./index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+          <h1>Laser Cutting</h1>
+        </div>
+
+        <div class="module-content">
+          <p class="lead">
+            This 7-day module introduced me to <strong>laser cutting</strong> — 
+            a subtractive manufacturing process that uses a high-powered laser to cut, engrave, and shape materials.  
+            From understanding the basics to creating my <strong>final cardboard bridge project</strong>, this journey gave me deep insight into design-to-fabrication workflows.
+          </p>
+
+          <!-- Day Sections -->
+          <div class="day-section">
+            <h2>Day 1 – Introduction & Applications</h2>
+            <p>
+              I explored what laser cutting is and how it’s used in real-world applications such as prototyping, architecture, 
+              signage, and art. I also learned about different types of lasers:
+              <strong>CO2 (best for wood/acrylic), Fiber (metals), and Diode (compact, lightweight)</strong>.  
+              Safety was emphasized—always wear protective glasses and never leave the machine unattended.  
+              ✅ Activity: I listed 5 common laser-cut items including jewelry, phone stands, stencils, keychains, and lamp shades.
+            </p>
+          </div>
+
+          <div class="day-section">
+            <h2>Day 2 – Hardware & Software</h2>
+            <p>
+              Learned the main parts of a laser cutter: <em>laser tube, focusing lens, mirrors, bed, air assist, exhaust</em>.  
+              Software used: <strong>LaserCad</strong>.  
+              I understood the difference between <strong>Vector (cut paths)</strong> and <strong>Raster (engraving/filling)</strong>.  
+              ✅ Activity: Designed a basic shape (circle + square) in vector mode and exported as <code>.dxf</code>.
+            </p>
+          </div>
+
+          <div class="day-section">
+            <h2>Day 3 – Design Basics</h2>
+            <p>
+              Learned to differentiate <strong>cut vs engrave</strong> settings. I also studied tolerances for <em>press-fit joints</em> (0.2–0.4mm gaps).  
+              ✅ Activity: Designed a small box with engraved logo and prepared the file for cutting.
+            </p>
+          </div>
+
+          <div class="day-section">
+            <h2>Day 4 – Materials & Settings</h2>
+            <p>
+              Tested different materials: wood, acrylic (transparent/colored), cardboard, and paper.  
+              Learned how <strong>speed, power, and frequency</strong> must be balanced:
+            </p>
+            <ul>
+              <li>High power + low speed = deep cuts, risk of burns</li>
+              <li>Low power + high speed = engraving</li>
+              <li>Medium balance = clean edges</li>
+            </ul>
+            ✅ Activity: Ran a speed/power test grid on cardboard to find the best settings.
+          </div>
+
+          <div class="day-section">
+            <h2>Day 5 – Operating the Laser</h2>
+            <p>
+              Learned how to focus the lens using the calibration tool, set the bed height, 
+              enable air assist and exhaust for safety.  
+              The process of sending files involved connecting via USB and selecting parameters in LaserCad.  
+              ✅ Activity: Cut my first real design successfully while performing all safety checks (like locating the emergency stop).
+            </p>
+          </div>
+
+          <div class="day-section">
+            <h2>Day 6 – Project Day</h2>
+            <p>
+              The project was to create a <strong>cardboard bridge</strong>. I prepared the design files with multiple interlocking parts, 
+              nested them efficiently to save material, and then sent the design to the laser cutter.  
+              ✅ Activity: Completed the cutting and assembled the bridge structure.
+            </p>
+          </div>
+
+          <div class="day-section">
+            <h2>Day 7 – Review & Maintenance</h2>
+            <p>
+              Learned common troubleshooting steps (handling burn marks, incomplete cuts, misalignment).  
+              Practiced cleaning mirrors and lens to maintain machine performance.  
+              ✅ Activity: Presented my cardboard bridge project and reflected on the improvements I could make, 
+              such as refining tolerances for stronger joints.
+            </p>
+          </div>
+
+          <!-- Final Project -->
+          <h2>Final Project – Cardboard Bridge</h2>
+          <p>
+            This was the culmination of the module. The bridge required careful design, 
+            precise parameter testing, and assembly skills. The result was a sturdy cardboard structure.
+          </p>
+          <div class="assets-grid">
+            <video controls>
+              <source src="./makingvideo (1).mp4" type="video/mp4">
+            </video>
+            <img src="./IMG_20250511_145016.jpg" alt="Final cardboard bridge">
+          </div>
+
+          <!-- Outcomes -->
+          <h2>✅ Learning Outcomes</h2>
+          <ul>
+            <li>Mastered the design-to-fabrication workflow of laser cutting.</li>
+            <li>Understood speed, power, and material settings for clean results.</li>
+            <li>Successfully fabricated a functional cardboard bridge as a team project.</li>
+          </ul>
+
+          <div class="mentor-note">
+            <strong>Mentor:</strong> Vansh Jaiswal [VJ] guided me in mastering laser cutting workflow and completing the bridge project safely.
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
+

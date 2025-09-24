@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Printing - Tanushri's FabLab Portfolio</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .module-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .back-link {
+      color: var(--primary-color);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      transition: all 0.3s;
+    }
+
+    .back-link:hover {
+      color: var(--primary-hover);
+      transform: translateX(-3px);
+    }
+
+    .back-link i {
+      margin-right: 8px;
+    }
+
+    .module-content {
+      color: var(--text-muted);
+    }
+
+    .module-content h2 {
+      font-size: 1.8rem;
+      color: var(--primary-color);
+      margin: 30px 0 20px;
+    }
+
+    .day-section {
+      margin-bottom: 2.5rem;
+      padding: 20px;
+      background: rgba(40, 40, 55, 0.6);
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow);
+    }
+
+    .day-section img, .day-section video {
+      margin-top: 15px;
+      border-radius: 10px;
+      max-width: 100%;
+    }
+
+    .mentor-note {
+      margin-top: 2rem;
+      padding: 15px;
+      background: rgba(139, 92, 246, 0.1);
+      border-left: 4px solid var(--primary-color);
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h1>Tanushri's Portfolio</h1>
+        <p>FabLab Journey</p>
+        <button id="sidebar-toggle" class="sidebar-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div class="sidebar-content">
+        <div class="sidebar-group">
+          <h3 class="sidebar-group-label">Dashboard</h3>
+          <ul class="sidebar-menu">
+            <li class="sidebar-menu-item">
+              <a href="./index.html" class="sidebar-menu-link">
+                <i class="fas fa-user"></i>
+                <span>About Me</span>
+              </a>
+            </li>
+            <li class="sidebar-menu-item">
+              <a href="./index.html#fablab-experience" class="sidebar-menu-link">
+                <i class="fas fa-layer-group"></i>
+                <span>FabLab Experience</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <h3 class="sidebar-group-label">FabLab Modules</h3>
+          <ul class="sidebar-menu">
+            <li class="sidebar-menu-item">
+                            <a href="./fablab-webdev.html" class="sidebar-menu-link">
+                                <i class="fas fa-code"></i>
+                                <span>Web Development</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="./cad.html" class="sidebar-menu-link">
+                                <i class="fas fa-drafting-compass"></i>
+                                <span>Computer Aided Designing</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="./cac.html" class="sidebar-menu-link">
+                                <i class="fas fa-cut"></i>
+                                <span>Laser Cutting</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="./3d-printing.html" class="sidebar-menu-link">
+                                <i class="fas fa-cube"></i>
+                                <span>3D Printing & Designing</span>
+                            </a>
+                        </li>
+                         <li class="sidebar-menu-item">
+                            <a href="./iot.html" class="sidebar-menu-link">
+                                <i class="fab fa-java"></i>
+                                <span>IOT & PCB Designing</span>
+                            </a>
+                        </li>
+                        
+                        <li class="sidebar-menu-item">
+                            <a href="./java.html" class="sidebar-menu-link">
+                                <i class="fab fa-java"></i>
+                                <span>Java</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="./cyber-security.html" class="sidebar-menu-link">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Cyber Security & Networking</span>
+                            </a>
+                        </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <ul class="sidebar-menu">
+          <li class="sidebar-menu-item">
+            <a href="./Tanushri_Resume_Professional_UI_React.pdf" download class="sidebar-menu-link">
+              <i class="fas fa-download"></i>
+              <span>Download Resume</span>
+            </a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a href="./index.html#contact" class="sidebar-menu-link">
+              <i class="fas fa-envelope"></i>
+              <span>Contact Me</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section class="content-section">
+        <div class="module-header">
+          <a href="./index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Home
+          </a>
+          <h1>3D Printing & Designing</h1>
+        </div>
+
+        <div class="module-content">
+          <p class="lead">
+            In this 7-day module, I explored the complete journey of <strong>3D printing</strong> — 
+            from theory and materials to slicing, troubleshooting, and post-processing. 
+            My highlight was printing a <strong>Star Wars spaceship</strong> as a final showcase.
+          </p>
+
+          <!-- Day Sections -->
+          <div class="day-section">
+            <h2>Day 1 – Basics of 3D Printing</h2>
+            <p>
+              Learned the fundamentals of additive manufacturing and studied the key printer parts 
+              like frame, bed, nozzle, and extruder. Watching a live demo helped me visualize how 
+              a digital design is gradually transformed into a tangible model.
+            </p>
+          </div>
+
+          <div class="day-section">
+            <h2>Day 2 – Materials & Safety</h2>
+            <p>
+              Understood PLA, ABS, PETG, and TPU filaments, their strengths, and ideal use cases. 
+              Practiced safety measures such as handling hot nozzles carefully and ensuring ventilation. 
+              Learned about bed adhesion using tape, glue, and heated surfaces.
+            </p>
+          </div>
+
+          <div class="day-section">
+            <h2>Day 3 – CAD & STL Files</h2>
+            <p>
+              Explored TinkerCAD for beginner-friendly designs and Fusion 360 for advanced modeling. 
+              Learned about the STL file format, which stores 3D models as triangular meshes, 
+              making it universally compatible with slicers.
+            </p>
+          </div>
+
+          <div class="day-section">
+            <h2>Day 4 – Slicing Software</h2>
+            <p>
+              Installed Cura slicer and experimented with layer height, infill %, supports, 
+              and print speed. Previewed toolpaths in the slicer, which made me confident 
+              about how the printer would execute the design.
+            </p>
+          </div>
+
+          <div class="day-section">
+            <h2>Day 5 – First Print & Calibration</h2>
+            <p>
+              Practiced bed leveling and nozzle calibration using a calibration cube and Benchy boat. 
+              Identified issues like stringing and slight layer shifting, which I documented for troubleshooting.
+            </p>
+          </div>
+
+          <div class="day-section">
+            <h2>Day 6 – Troubleshooting & Print Quality</h2>
+            <p>
+              Fixed stringing by lowering print temperature and enabling retraction. 
+              Improved bed adhesion by adjusting leveling and temperature. 
+              Experimented with belt tightening to prevent layer shifting. 
+              Explored different infill patterns and speeds.
+            </p>
+          </div>
+
+          <div class="day-section">
+            <h2>Day 7 – Post-processing & Advanced Learning</h2>
+            <p>
+              Smoothed prints with sanding and learned about acetone vapor treatment for ABS. 
+              Painted models with acrylics for a polished finish. Explored advanced filaments like 
+              wood-fill and carbon-fiber PLA, and understood the basics of resin (SLA/DLP) printing.
+            </p>
+          </div>
+
+          <!-- Star Wars Spaceship Project -->
+          <div class="day-section">
+            <h2>🚀 Star Wars Spaceship Project</h2>
+            <p>
+              For my final practice, I printed a <strong>Star Wars spaceship</strong>. 
+              This project tested everything I had learned: STL preparation, slicer parameters, 
+              calibration, and post-processing.
+            </p>
+            <img src="./3dprintingdetails.jpeg.jpg" alt="Slicer parameters for spaceship print">
+            <video controls>
+              <source src="./printingvideo (1).mp4" type="video/mp4">
+              Your browser does not support video playback.
+            </video>
+            <img src="./WhatsApp Image 2025-09-24 at 07.02.45_6a1f6bd5.jpg" alt="Final printed Star Wars spaceship">
+          </div>
+
+          <h2>✅ Learning Outcomes</h2>
+          <ul>
+            <li>Independently use slicing software for any STL model.</li>
+            <li>Operate FDM printers confidently, including calibration and troubleshooting.</li>
+            <li>Connect digital CAD models with physical printed prototypes.</li>
+            <li>Apply post-processing techniques for professional finishes.</li>
+          </ul>
+
+          <div class="mentor-note">
+            <strong>Mentor:</strong> Rahul Chaudhary guided me throughout this module, 
+            combining theory with practical tips for high-quality 3D printing.
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
