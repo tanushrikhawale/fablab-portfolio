@@ -1,67 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Networking - Tanushri's FabLab Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Networking Module — 7 Days | Tanushri's FabLab Portfolio</title>
+
+  <!-- your global styles (keeps consistent look with rest of site) -->
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
-    .module-header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 30px;
-    }
-    .back-link {
-      color: var(--primary-color);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      margin-right: 20px;
-      transition: all 0.3s;
-    }
-    .back-link:hover { color: var(--primary-hover); transform: translateX(-3px); }
-    .back-link i { margin-right: 8px; }
-    .module-content { color: var(--text-muted); }
-    .module-content h2 {
-      font-size: 1.8rem;
-      color: var(--primary-color);
-      margin: 30px 0 20px;
-    }
-    .day-section {
-      margin-bottom: 2.5rem;
-      padding: 20px;
-      background: rgba(40, 40, 55, 0.6);
-      border-radius: 10px;
-      border: 1px solid var(--border-color);
-      box-shadow: var(--shadow);
-    }
-    .day-section pre {
-      background: #1e1e2f;
-      padding: 10px;
-      border-radius: 8px;
-      overflow-x: auto;
-      margin: 10px 0;
-      color: #00ffea;
-      font-size: 0.9rem;
-    }
-    .day-section img {
-      margin-top: 15px;
-      border-radius: 10px;
-      max-width: 100%;
-    }
-    .mentor-note {
-      margin-top: 2rem;
-      padding: 15px;
-      background: rgba(139, 92, 246, 0.1);
-      border-left: 4px solid var(--primary-color);
-      border-radius: 8px;
-    }
+    /* small page-specific tweaks */
+    .module-header { display:flex; align-items:center; gap:1rem; margin-bottom:1.6rem; }
+    .back-link { color:var(--primary-color); text-decoration:none; display:flex; align-items:center; gap:.5rem; transition:transform .18s ease; }
+    .back-link:hover { transform: translateX(-4px); color:var(--primary-hover); }
+    .module-content { color:var(--text-muted); }
+    .lead { margin-bottom:1rem; color:var(--text-light); font-size:1.05rem; }
+    .day-section { margin-bottom:1.8rem; padding:1.1rem 1.2rem; background: rgba(30,30,40,0.55); border-radius:12px; border:1px solid var(--border-color); box-shadow:var(--shadow); }
+    .day-section h2 { margin-bottom:.6rem; color:var(--primary-light); font-size:1.15rem; }
+    .day-section p { margin-bottom:.8rem; line-height:1.6; color:var(--text-light); }
+    .day-section ul { margin-left:1.2rem; color:var(--text-light); }
+    pre { background:#0f1724; color:#c7f9e8; padding:.8rem; border-radius:8px; overflow:auto; font-size:.92rem; }
+    .img-block { margin: .8rem 0; display:flex; gap:12px; flex-wrap:wrap; }
+    .img-block img { width: 100%; max-width:340px; border-radius:8px; object-fit:cover; border:1px solid rgba(255,255,255,0.04); }
+    .outcomes, .mentor-note { margin-top:1.2rem; }
+    .mentor-note { padding:0.8rem 1rem; background: rgba(139,92,246,0.06); border-left:4px solid var(--primary-color); border-radius:8px; color:var(--text); }
+    @media (max-width:900px) { .img-block img { max-width:48%; } }
+    @media (max-width:480px) { .img-block img { max-width:100%; } }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Sidebar -->
+    <!-- Sidebar (keep your site's sidebar markup & classes so styling works) -->
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-header">
         <h1>Tanushri's Portfolio</h1>
@@ -77,166 +47,252 @@
             <li><a href="./index.html#fablab-experience" class="sidebar-menu-link"><i class="fas fa-layer-group"></i><span>FabLab Experience</span></a></li>
           </ul>
         </div>
+
         <div class="sidebar-group">
           <h3 class="sidebar-group-label">FabLab Modules</h3>
           <ul class="sidebar-menu">
             <li><a href="./fablab-webdev.html" class="sidebar-menu-link"><i class="fas fa-code"></i><span>Web Development</span></a></li>
-            <li><a href="./cad.html" class="sidebar-menu-link"><i class="fas fa-drafting-compass"></i><span>Computer Aided Designing</span></a></li>
+            <li><a href="./cad.html" class="sidebar-menu-link"><i class="fas fa-drafting-compass"></i><span>CAD</span></a></li>
             <li><a href="./cac.html" class="sidebar-menu-link"><i class="fas fa-cut"></i><span>Laser Cutting</span></a></li>
             <li><a href="./3d-printing.html" class="sidebar-menu-link"><i class="fas fa-cube"></i><span>3D Printing</span></a></li>
             <li><a href="./java.html" class="sidebar-menu-link"><i class="fab fa-java"></i><span>Java</span></a></li>
-            <li><a href="./networking.html" class="sidebar-menu-link active"><i class="fas fa-shield-alt"></i><span>Networking</span></a></li>
+            <li><a href="./networking.html" class="sidebar-menu-link active"><i class="fas fa-network-wired"></i><span>Networking</span></a></li>
           </ul>
         </div>
       </div>
+
       <div class="sidebar-footer">
         <ul class="sidebar-menu">
-          <li><a href="./Tanushri_Resume_Professional_UI_React.pdf" download class="sidebar-menu-link"><i class="fas fa-download"></i><span>Download Resume</span></a></li>
-          <li><a href="./index.html#contact" class="sidebar-menu-link"><i class="fas fa-envelope"></i><span>Contact Me</span></a></li>
+          <li><a href="./Tanushri_Resume_Professional_UI_React.pdf" download class="sidebar-menu-link"><i class="fas fa-download"></i><span>Resume</span></a></li>
+          <li><a href="./index.html#contact" class="sidebar-menu-link"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
         </ul>
       </div>
     </aside>
 
-    <!-- Main Content -->
+    <!-- Main content -->
     <main class="main-content">
       <section class="content-section">
         <div class="module-header">
-          <a href="./index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
-          <h1>Networking</h1>
+          <a class="back-link" href="./index.html"><i class="fas fa-arrow-left"></i> Back to Home</a>
+          <div>
+            <h1 style="margin:0 0 .2rem 0;">Networking — 7-day Module</h1>
+            <div style="color:var(--text-lighter); font-size:.95rem;">Detailed theory, labs and applied examples (timeline follows Renuka's doc). :contentReference[oaicite:1]{index=1}</div>
+          </div>
         </div>
 
         <div class="module-content">
           <p class="lead">
-            This 7-day module gave me an in-depth understanding of <strong>computer networking</strong> — 
-            how devices communicate, how networks are structured, and how protocols ensure data reaches safely.  
-            I also touched on <strong>cyber security practices</strong> to protect these networks from threats.  
+            This page documents the seven-day networking module: each day builds on the previous one,
+            moving from fundamental concepts to packet-level diagnostics and finally a small embedded-network project.
+            The structure and topics follow the reference module. :contentReference[oaicite:2]{index=2}
           </p>
 
           <!-- Day 1 -->
           <div class="day-section">
-            <h2>Day 1 – Networking Basics</h2>
+            <h2>Day 1 — Foundations: what a network is and how information travels</h2>
+
             <p>
-              I began by learning what a network is — a system where devices (computers, smartphones, IoT gadgets) 
-              connect to share data and resources.  
-              Key components include <strong>sender, receiver, transmission medium, protocol</strong>, and <strong>message</strong>.
+              We started with the minimal model: a sender, a receiver, a message, a medium and a shared protocol. Practically,
+              this means breaking down how bits (0/1) travel across copper, fibre or radio and are reassembled at the other end.
+              The session emphasized the idea of *reliable transmission*: ordering, completeness and correctness are the goals.
             </p>
+
             <p>
-              Different network types were introduced:
-              <ul>
-                <li><strong>LAN</strong> – Local networks within a building.</li>
-                <li><strong>MAN</strong> – City-wide networks.</li>
-                <li><strong>WAN</strong> – Large networks like the Internet.</li>
-              </ul>
+              Communication modes were explained with physical analogies: <strong>simplex</strong> (one-way like TV broadcasting),
+              <strong>half-duplex</strong> (two-way but one direction at a time, like walkie-talkies) and <strong>full-duplex</strong> (two-way simultaneously, like modern VoIP).
+              Understanding modes clarifies why some links can transmit both directions at once and others cannot.
             </p>
-            <img src="./images/network-basics.png" alt="Basic network types diagram">
-            <p><strong>Activity:</strong> Drew a home network showing how my laptop and phone connect through a WiFi router.</p>
+
+            <p>
+              We also contrasted analog vs digital transmission: analog is continuous (audio waveforms), whereas digital encodes information
+              in discrete symbols — digital is less sensitive to noise, easier to encrypt, and simpler to multiplex in modern networks.
+              Practical characteristics we measured were throughput (speed), latency (delay), reliability and error rate.
+            </p>
+
+            <div class="img-block">
+              <img src="./images/network-basics.png" alt="Diagram: sender, medium and receiver">
+            </div>
+
+            <p><strong>Activity:</strong> sketched a home network: router, phone, laptop. Traced a sample WhatsApp packet across local Wi-Fi → ISP → recipient; this clarified real-world packet traversal. :contentReference[oaicite:3]{index=3}</p>
           </div>
 
           <!-- Day 2 -->
           <div class="day-section">
-            <h2>Day 2 – OSI & TCP/IP Models</h2>
+            <h2>Day 2 — Types of networks & nature of data</h2>
+
             <p>
-              I explored the <strong>OSI 7-layer model</strong> and the <strong>TCP/IP 4-layer model</strong>.  
-              Each layer has responsibilities — e.g., the <em>Network Layer</em> handles addressing and routing, 
-              while the <em>Transport Layer</em> ensures reliable data delivery using TCP/UDP.
+              Day 2 zoomed out. We classified networks by scope and function: <strong>PAN</strong> (personal area networks like Bluetooth), <strong>LAN</strong> (home/office),
+              <strong>MAN</strong> (city-wide) and <strong>WAN</strong> (ISP/internet). The key differences are scale, management and QoS (quality-of-service) requirements.
             </p>
+
             <p>
-              Encapsulation was a big takeaway: data is wrapped in headers as it travels down the OSI stack and unwrapped at the receiver.
+              We compared architectural models: <strong>client-server</strong> (centralized services, e.g., web servers) vs. <strong>peer-to-peer</strong> (distributed sharing, e.g., some file-sharing systems).
+              The choice affects latency, resilience and how state is managed.
             </p>
-            <img src="./images/osi-model.png" alt="OSI Model Layers Diagram">
-            <pre><code>ping 192.168.1.2</code></pre>
-            <p><strong>Activity:</strong> Used Packet Tracer to connect PCs and verified with <code>ping</code>.</p>
+
+            <p>
+              We also discussed the *nature of data* that flows on networks: structured transactional data (databases), observed sensor data (slow but frequent IoT telemetry),
+              and inferred or analytic data (batch processed). Understanding data kinds helps select transport, storage and security strategies.
+            </p>
+
+            <div class="img-block">
+              <img src="./images/network-types.png" alt="LAN, MAN, WAN comparison diagram">
+            </div>
+
+            <p><strong>Use-case note:</strong> low-latency use cases (financial trading) require different links and tuning than bulk file transfer — that distinction guided our lab choices. :contentReference[oaicite:4]{index=4}</p>
           </div>
 
           <!-- Day 3 -->
           <div class="day-section">
-            <h2>Day 3 – IP Addressing & Subnetting</h2>
+            <h2>Day 3 — OSI model demystified (the 7 layers)</h2>
+
             <p>
-              Learned <strong>IPv4 addressing</strong>, classes (A, B, C), and private vs public IPs.  
-              Subnetting was initially tricky but made sense after dividing <code>192.168.1.0/24</code> into smaller networks.
+              Day 3 was the OSI deep-dive. The OSI model separates networking into seven layers so we can reason about responsibilities:
+              Physical (bits & media), Data Link (MAC frames, switching), Network (IP routing), Transport (TCP/UDP reliability), Session/Presentation (connection & encoding) and Application (HTTP, FTP, DNS).
             </p>
+
             <p>
-              Example configuration:
+              We studied representative protocols for each layer: Ethernet at Data Link; IP at Network; TCP and UDP at Transport; and HTTP/HTTPS at Application.
+              A core exercise was *encapsulation*: an application payload gets wrapped with headers (transport → network → link) as it goes down the stack and then unwrapped by the receiver.
             </p>
-            <pre><code>PC1: 192.168.1.10  Subnet: 255.255.255.0  Gateway: 192.168.1.1
-PC2: 192.168.1.20  Subnet: 255.255.255.0  Gateway: 192.168.1.1</code></pre>
-            <img src="./images/ip-subnetting.png" alt="IP Addressing and Subnetting example diagram">
-            <p><strong>Activity:</strong> Configured IPs manually on two PCs and tested connectivity.</p>
+
+            <p>
+              For hands-on, we traced a packet using <code>ping</code> and <code>traceroute</code>, observing how TTL and hops appear. This helped build intuition for routing behavior and which layer is responsible for errors or congestion.
+            </p>
+
+            <div class="img-block">
+              <img src="./images/osi-model.png" alt="OSI model — 7 layers chart">
+            </div>
+
+            <p><strong>Commands:</strong></p>
+            <pre><code># basic diagnostics
+ping 8.8.8.8
+traceroute example.com</code></pre>
+
+            <p style="font-size:.95rem;color:var(--text-lighter);">(This day corresponds to Day 3 in the reference module.) :contentReference[oaicite:5]{index=5}</p>
           </div>
 
           <!-- Day 4 -->
           <div class="day-section">
-            <h2>Day 4 – Routing & Switching</h2>
+            <h2>Day 4 — Inside the web: DNS, HTTP & REST</h2>
+
             <p>
-              The session focused on devices: <strong>Switches</strong> (work at Layer 2, MAC-based) and <strong>Routers</strong> (Layer 3, IP-based).  
-              I configured static routes in Packet Tracer to enable communication across LANs.
+              The focus moved to how the web actually works: <strong>DNS</strong> resolves human-friendly names to IP addresses — it's the internet's lookup service.
+              We discussed DNS caching, TTL, authoritative vs recursive resolvers, and how caching speeds up repeated lookups.
             </p>
-            <pre><code>Router> enable
-Router# configure terminal
-Router(config)# ip route 192.168.2.0 255.255.255.0 10.0.0.2</code></pre>
-            <img src="./images/routing-switching.png" alt="Routing and Switching diagram">
-            <p><strong>Activity:</strong> Linked two LANs and enabled cross-LAN communication.</p>
+
+            <p>
+              HTTP and HTTPS were explained at the request/response level: methods (GET, POST, PUT, DELETE), headers (Content-Type, Authorization) and status codes (2xx success, 4xx client error, 5xx server error).
+              We also covered RESTful API design patterns and idempotency concerns.
+            </p>
+
+            <p>
+              Lab tools included <code>nslookup</code> / <code>dig</code> to inspect DNS records and browser developer tools (Network tab) to watch HTTP handshakes and headers.
+            </p>
+
+            <div class="img-block">
+              <img src="./images/dns-http.png" alt="DNS resolution and HTTP request/response diagram">
+            </div>
+
+            <p><strong>Example (quick lookups):</strong></p>
+            <pre><code>nslookup example.com
+curl -I https://example.com</code></pre>
+
+            <p>Practical exercise: observed how caches and CDN edge nodes affect response times and how to read response headers for caching policies. :contentReference[oaicite:6]{index=6}</p>
           </div>
 
           <!-- Day 5 -->
           <div class="day-section">
-            <h2>Day 5 – Cyber Security Fundamentals</h2>
+            <h2>Day 5 — DHCP, static vs dynamic addressing & review</h2>
+
             <p>
-              Learned about the <strong>CIA Triad</strong> (Confidentiality, Integrity, Availability).  
-              Explored types of attacks like Phishing, DDoS, and SQL Injection.  
-              Understood the role of firewalls and antivirus software in prevention.
+              DHCP (Dynamic Host Configuration Protocol) automates IP assignment. We learned the handshake phases: <strong>Discover → Offer → Request → Acknowledge</strong>.
+              DHCP also provides gateway, DNS servers and lease time which controls how long an address is valid.
             </p>
-            <img src="./images/cyber-attacks.png" alt="Common cyber attacks diagram">
-            <p><strong>Activity:</strong> Identified phishing email patterns and discussed prevention strategies.</p>
+
+            <p>
+              The class contrasted static addressing (useful for servers & infrastructure) with DHCP (convenient for end devices). We inspected a router’s DHCP lease table to see addresses, MACs and expiry times.
+            </p>
+
+            <div class="img-block">
+              <img src="./images/dhcp-handshake.png" alt="DHCP Discover Offer Request Acknowledge diagram">
+            </div>
+
+            <p><strong>Lab tip:</strong> when diagnosing client connectivity, check the lease, gateway and DNS assigned by DHCP before assuming application-level faults. :contentReference[oaicite:7]{index=7}</p>
           </div>
 
           <!-- Day 6 -->
           <div class="day-section">
-            <h2>Day 6 – Hands-on Security</h2>
-            <p>
-              Hands-on session with <strong>Kali Linux</strong>.  
-              Used tools like <em>Nmap</em> to scan open ports and <em>Wireshark</em> to capture live packets.  
-              This showed why encrypted communication (HTTPS) is critical.
-            </p>
-            <pre><code># Scan open ports
-nmap 192.168.1.1
+            <h2>Day 6 — Low-level protocols (ARP, ICMP) and diagnostics</h2>
 
-# Capture live traffic
-wireshark</code></pre>
-            <img src="./images/nmap-wireshark.png" alt="Nmap and Wireshark example screenshot">
-            <p><strong>Activity:</strong> Captured HTTP packets and saw usernames/passwords in plaintext.</p>
+            <p>
+              We dug into ARP (Address Resolution Protocol) — how an IP address is translated to a MAC address on a LAN. ARP uses broadcast queries and caches the reply in an ARP table.
+              That explains why devices on the same LAN can send frames directly using MAC addresses.
+            </p>
+
+            <p>
+              ICMP (Internet Control Message Protocol) supports diagnostics such as echo requests/replies (used by <code>ping</code>) and TTL-exceeded messages (used by traceroute).
+              Using Wireshark, we inspected ARP requests and ICMP echo packets to see the actual bytes on the wire.
+            </p>
+
+            <div class="img-block">
+              <img src="./images/arp-icmp.png" alt="ARP request/reply and ICMP echo example">
+            </div>
+
+            <p><strong>Useful commands:</strong></p>
+            <pre><code>arp -a        # show local ARP table
+ping 192.168.1.1
+sudo wireshark  # capture & inspect packets</code></pre>
+
+            <p><strong>Activity:</strong> identified a misconfigured gateway by observing ARP replies and missing ICMP responses. :contentReference[oaicite:8]{index=8}</p>
           </div>
 
           <!-- Day 7 -->
           <div class="day-section">
-            <h2>Day 7 – Secure Networking Practices</h2>
+            <h2>Day 7 — Project: embedded networking (Zynq FPGA example)</h2>
+
             <p>
-              Final day focused on <strong>defensive measures</strong>.  
-              Implemented WPA2 security on WiFi, SSL/TLS certificates, and VPN basics.  
-              Discussed real-world breaches like WannaCry and how companies mitigate them.
+              On the final day the class combined networking fundamentals with embedded systems: a Zynq FPGA-based demonstrator that implements minimal TCP/IP stack components.
+              The project required putting DHCP, ARP and basic ICMP handling together so the device could boot, get an address and respond to pings.
             </p>
-            <img src="./images/secure-networking.png" alt="Secure Networking Practices diagram">
-            <p><strong>Activity:</strong> Configured WPA2 on Packet Tracer routers and enabled firewall rules.</p>
+
+            <p>
+              This exercise bridged software and hardware: we configured the programmable logic for network I/O and ran a lightweight network stack on the processing system.
+              The outcome reinforced that the same protocols used on servers are essential on embedded & IoT devices — with extra attention to resource constraints and boot-time networking.
+            </p>
+
+            <div class="img-block">
+              <img src="./images/zynq-iot.png" alt="Embedded/FPGA networking block diagram">
+            </div>
+
+            <p><strong>Project takeaway:</strong> applying DHCP + ARP + ICMP in constrained hardware clarified timing, retries and how to debug using simple packet captures. :contentReference[oaicite:9]{index=9}</p>
           </div>
 
           <!-- Outcomes -->
-          <h2>✅ Learning Outcomes</h2>
-          <ul>
-            <li>Mastered OSI model, IP addressing, and subnetting.</li>
-            <li>Configured routers & switches in Packet Tracer.</li>
-            <li>Understood common cyber threats and countermeasures.</li>
-            <li>Performed basic penetration testing with Kali Linux tools.</li>
-            <li>Learned secure networking best practices.</li>
-          </ul>
-
-          <div class="mentor-note">
-            <strong>Mentor:</strong> Gorav Sharma guided me throughout this networking journey, balancing theory with labs.
+          <div class="outcomes">
+            <h2>✅ Learning outcomes</h2>
+            <ul>
+              <li>Clear mental model of the OSI layers and which layer handles what responsibilities.</li>
+              <li>Comfort with IP addressing, subnetting and DHCP for practical network design.</li>
+              <li>Hands-on experience with Packet Tracer, Wireshark and command-line diagnostics (ping/traceroute/arp).</li>
+              <li>Awareness of security & operational trade-offs when deploying embedded networked devices.</li>
+            </ul>
           </div>
+
+          <!-- Mentor -->
+          <div class="mentor-note">
+            <strong>Mentor:</strong> Gorav Sharma — guided the module and helped translate theory to real labs and the final embedded networking project. :contentReference[oaicite:10]{index=10}
+          </div>
+
+          <p style="margin-top:1rem; color:var(--text-lighter); font-size:.92rem;">
+            <strong>Image instructions:</strong> I added image placeholders pointing to <code>./images/</code>. Download diagrams (OSI chart, DHCP handshake, ARP/ICMP captures, Packet Tracer screenshots) from any free source (Google Images, Wikimedia, Freepik). Save them with the filenames used above (e.g. <code>osi-model.png</code>, <code>dhcp-handshake.png</code>) and commit to your repo so they appear inline.
+          </p>
+
         </div>
       </section>
     </main>
   </div>
+
   <script src="./script.js"></script>
 </body>
 </html>
-
