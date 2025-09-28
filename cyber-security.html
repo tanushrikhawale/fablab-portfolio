@@ -14,12 +14,12 @@
     .back-link:hover { transform: translateX(-4px); color:var(--primary-hover); }
     .module-content { color:var(--text-muted); }
     .lead { margin-bottom:1rem; color:var(--text-light); font-size:1.05rem; }
-    .day-section { margin-bottom:1.8rem; padding:1.2rem; background: rgba(30,30,40,0.55); border-radius:12px; border:1px solid var(--border-color); box-shadow:var(--shadow); }
-    .day-section h2 { margin-bottom:.6rem; color:var(--primary-light); font-size:1.2rem; }
+    .day-section { margin-bottom:2rem; padding:1.2rem; background: rgba(30,30,40,0.55); border-radius:12px; border:1px solid var(--border-color); box-shadow:var(--shadow); }
+    .day-section h2 { margin-bottom:.6rem; color:var(--primary-light); font-size:1.3rem; }
     .day-section p { margin-bottom:.8rem; line-height:1.65; color:var(--text-light); }
     pre { background:#0f1724; color:#c7f9e8; padding:.9rem; border-radius:8px; overflow:auto; font-size:.92rem; }
     .outcomes { margin-top:1.2rem; }
-    .mentor-note { margin-top:1.2rem; padding:.9rem 1rem; background: rgba(139,92,246,0.08); border-left:4px solid var(--primary-color); border-radius:8px; color:var(--text); }
+    .mentor-note { margin-top:1.5rem; padding:.9rem 1rem; background: rgba(139,92,246,0.08); border-left:4px solid var(--primary-color); border-radius:8px; color:var(--text); }
   </style>
 </head>
 <body>
@@ -72,121 +72,140 @@
 
         <div class="module-content">
           <p class="lead">
-            This 7-day module explored the <strong>theory and practice of computer networking</strong> — 
-            from basic concepts to diagnostic tools, and finally applying protocols in an embedded project.
+            This module was a structured, 7-day introduction to <strong>Networking fundamentals</strong>.  
+            Each day focused on a specific topic, starting with basics and culminating in a working embedded project.  
+            Through a mix of theory, Packet Tracer labs, and command-line practice, I learned how devices communicate, how protocols operate, and how to analyze traffic.
           </p>
 
           <!-- Day 1 -->
           <div class="day-section">
-            <h2>Day 1 – Foundations of Networking</h2>
+            <h2>Day 1 – Introduction to Networking</h2>
             <p>
-              We began by defining the essentials of communication: sender, receiver, medium, message, and protocol. 
-              Modes of transmission (simplex, half-duplex, full-duplex) and analog vs digital signals were explained. 
-              We also studied performance factors: bandwidth, latency, reliability, and error rate.
+              Networking is about enabling communication between devices. On the first day, I learned about the 
+              essential components of any communication system — sender, receiver, medium, message, and protocol.  
+              We discussed why protocols are needed to standardize communication across different devices and manufacturers.  
             </p>
-            <p><strong>Activity:</strong> Drew a home network diagram and traced how a smartphone communicates with a laptop over Wi-Fi.</p>
+            <p>
+              I also studied transmission modes: <em>simplex</em> (one way), <em>half-duplex</em> (both ways but not at the same time), 
+              and <em>full-duplex</em> (simultaneous two-way). We related these to real-world examples like radios, walkie-talkies, and phone calls.
+            </p>
+            <p><strong>Activity:</strong> Drew a network showing how my laptop, smartphone, and printer communicate via a Wi-Fi router.</p>
           </div>
 
           <!-- Day 2 -->
           <div class="day-section">
             <h2>Day 2 – Types of Networks & Data</h2>
             <p>
-              Classified networks: <strong>PAN</strong>, <strong>LAN</strong>, <strong>MAN</strong>, and <strong>WAN</strong>. 
-              Compared client-server vs peer-to-peer models, and discussed the nature of transmitted data 
-              (structured transactions, IoT telemetry, analytics).
+              On the second day, we classified networks by scale: <strong>PAN</strong> (Bluetooth devices), <strong>LAN</strong> (home/office networks), 
+              <strong>MAN</strong> (city-wide), and <strong>WAN</strong> (global Internet).  
+              We also distinguished between client-server models, where central servers provide services, and peer-to-peer networks, where devices share directly.
             </p>
-            <p><strong>Activity:</strong> Identified real-world examples of each type — Bluetooth headphones (PAN), college Wi-Fi (LAN), metro city WAN connections.</p>
+            <p>
+              Another key discussion was on the <em>nature of data</em>: structured data like banking transactions, 
+              unstructured data like social media, and real-time data from IoT devices. Understanding data types helped me connect networking to real-world applications.
+            </p>
+            <p><strong>Activity:</strong> Identified and presented 3 use-cases of LAN and WAN in daily life.</p>
           </div>
 
           <!-- Day 3 -->
           <div class="day-section">
             <h2>Day 3 – OSI Model</h2>
             <p>
-              The 7-layer OSI model was studied in detail: Physical, Data Link, Network, Transport, Session, Presentation, and Application. 
-              Each layer’s responsibility and common protocols (Ethernet, IP, TCP/UDP, HTTP) were discussed. 
-              Encapsulation and de-encapsulation illustrated how data travels.
+              The OSI model describes networking in 7 layers: Physical, Data Link, Network, Transport, Session, Presentation, and Application.  
+              I learned how each layer has its own responsibility — for example, the Transport layer (TCP/UDP) ensures reliable delivery, while the Network layer (IP) handles addressing and routing.
             </p>
-            <pre><code># Diagnostics
+            <p>
+              Encapsulation was a core takeaway: when data moves down the OSI stack, headers are added, and when it reaches the receiver, those headers are stripped layer by layer.  
+              This logical division makes complex communication easier to manage and troubleshoot.
+            </p>
+            <pre><code># Checking connectivity
 ping 8.8.8.8
-traceroute google.com</code></pre>
-            <p><strong>Activity:</strong> Used ping and traceroute to see packet flow and intermediate hops.</p>
+traceroute www.google.com</code></pre>
+            <p><strong>Activity:</strong> Used ping and traceroute to understand packet travel and delays.</p>
           </div>
 
           <!-- Day 4 -->
           <div class="day-section">
-            <h2>Day 4 – DNS & HTTP</h2>
+            <h2>Day 4 – HTTP & DNS</h2>
             <p>
-              Learned about <strong>DNS</strong> resolving hostnames to IPs, caching, TTLs, and recursive vs authoritative servers. 
-              Explored <strong>HTTP/HTTPS</strong> request methods, status codes, and REST principles. 
-              Observed real requests in browser developer tools.
+              Day 4 focused on application-layer protocols. I explored <strong>DNS</strong>, which translates domain names into IP addresses, 
+              and understood the difference between recursive and authoritative DNS servers. TTL values explained how long results are cached.
             </p>
-            <pre><code>nslookup example.com
+            <p>
+              We also studied <strong>HTTP/HTTPS</strong>, request/response cycles, and status codes (200, 404, 500).  
+              With developer tools, I could see live headers and responses, making the concepts practical.
+            </p>
+            <pre><code># DNS Lookup
+nslookup openai.com
+
+# View HTTP headers
 curl -I https://example.com</code></pre>
-            <p><strong>Activity:</strong> Inspected DNS records and HTTP headers for caching policies.</p>
+            <p><strong>Activity:</strong> Resolved domain names and inspected HTTP responses for caching info.</p>
           </div>
 
           <!-- Day 5 -->
           <div class="day-section">
-            <h2>Day 5 – DHCP & Addressing</h2>
+            <h2>Day 5 – DHCP</h2>
             <p>
-              Covered DHCP’s Discover-Offer-Request-Acknowledge process and its role in automating IP assignments. 
-              Compared static vs dynamic addressing. 
-              Reviewed real DHCP lease tables on routers.
+              DHCP automates IP assignment. We studied the DORA process: Discover, Offer, Request, Acknowledge.  
+              This process reduces manual configuration and prevents conflicts in networks with many devices.  
+              We compared static IPs vs dynamic IPs and discussed where each is useful.
             </p>
             <pre><code># Example DHCP lease
 IP Address : 192.168.1.25
 MAC Addr   : 00:1A:2B:3C:4D:5E
-Lease Exp. : 24 hours</code></pre>
-            <p><strong>Activity:</strong> Configured manual static IPs and compared to DHCP-assigned addresses.</p>
+Lease Time : 24 hours</code></pre>
+            <p><strong>Activity:</strong> Observed DHCP leases on a local router and manually configured a static IP for comparison.</p>
           </div>
 
           <!-- Day 6 -->
           <div class="day-section">
             <h2>Day 6 – ARP & ICMP</h2>
             <p>
-              Explored ARP for mapping IP to MAC addresses on a LAN. 
-              Used ICMP (ping) for diagnostics. 
-              Verified ARP tables and packet exchanges with Wireshark.
+              The sixth day introduced <strong>ARP</strong> (Address Resolution Protocol), which maps IP addresses to MAC addresses inside a LAN.  
+              We also revisited <strong>ICMP</strong> (used in ping) for diagnostics. This helped me understand how devices locate each other physically within a network.
             </p>
-            <pre><code>arp -a         # view ARP table
+            <pre><code># View ARP table
+arp -a
+
+# Test reachability
 ping 192.168.1.1
-# Capture live packets
+
+# Capture packets
 sudo wireshark</code></pre>
-            <p><strong>Activity:</strong> Detected a misconfigured gateway by analyzing ARP replies and ICMP failures.</p>
+            <p><strong>Activity:</strong> Inspected ARP cache entries and saw real-time ICMP packet exchanges in Wireshark.</p>
           </div>
 
           <!-- Day 7 -->
           <div class="day-section">
             <h2>Day 7 – Embedded Networking Project</h2>
             <p>
-              Final day project: implementing DHCP, ARP, and ICMP on a Zynq FPGA board. 
-              The device successfully booted, acquired an IP via DHCP, and responded to ping requests. 
-              This reinforced how the same core protocols apply in IoT and embedded contexts.
+              On the final day, we applied everything in an embedded environment using a Zynq FPGA board.  
+              The board was programmed to acquire an IP via DHCP, resolve ARP requests, and respond to ICMP pings.  
+              Seeing the protocols I had studied come alive in hardware was a powerful way to connect theory to practice.
             </p>
-            <p><strong>Outcome:</strong> Demonstrated a working embedded device on the lab network, applying all learned protocols together.</p>
+            <p><strong>Outcome:</strong> Demonstrated a working embedded system communicating over the network, showcasing complete understanding of the week’s lessons.</p>
           </div>
 
           <!-- Outcomes -->
           <div class="outcomes">
             <h2>✅ Learning Outcomes</h2>
             <ul>
-              <li>Understood the OSI model and protocol responsibilities.</li>
-              <li>Practiced IP addressing, DHCP, and subnetting.</li>
-              <li>Gained confidence with tools: ping, traceroute, nslookup, curl, Wireshark.</li>
-              <li>Applied ARP and ICMP in troubleshooting.</li>
-              <li>Completed an embedded networking project integrating all concepts.</li>
+              <li>Learned communication fundamentals and network classifications.</li>
+              <li>Understood OSI model layers and encapsulation.</li>
+              <li>Configured and tested DNS, HTTP, and DHCP concepts.</li>
+              <li>Practiced ARP and ICMP with real diagnostic tools.</li>
+              <li>Implemented an embedded project demonstrating core networking protocols.</li>
             </ul>
           </div>
 
           <div class="mentor-note">
-            <strong>Mentor:</strong> Gorav Sharma guided the Networking module with both theory and lab support.
+            <strong>Mentor:</strong> Gorav Sharma guided me through networking concepts and lab work.
           </div>
         </div>
       </section>
     </main>
   </div>
-
   <script src="./script.js"></script>
 </body>
 </html>
-
